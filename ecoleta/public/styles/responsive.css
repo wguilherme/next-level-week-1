@@ -22,7 +22,7 @@
       grid-template-columns: 1fr;
    }
 
-   #page-search-results img {
+   #page-search-results .card img {
       height: 250px
    }
 
