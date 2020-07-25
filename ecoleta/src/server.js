@@ -4,20 +4,27 @@ const server = express()
 // public folder
 server.use(express.static("public"))
 
+//template engine nunjucks
+const nunjucks = require("nunjucks")
+nunjucks.configure("src/views", {
+   express: server,
+   noCache: true
+})
+
 
 // routes
 
 // homepage
 server.get('/', (req, res) =>{
-   res.sendFile(__dirname + "/views/index.html")
+   res.render("index.html")
 })
 // create point
 server.get('/create-point', (req, res) =>{
-   res.sendFile(__dirname + "/views/create-point.html")
+   res.render("create-point.html")
 })
 // search results
 server.get('/search-results', (req, res) =>{
-   res.sendFile(__dirname + "/views/search-results.html")
+   res.render("search-results.html")
 })
 
 
