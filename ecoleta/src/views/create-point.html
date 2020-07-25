@@ -22,10 +22,15 @@
             <legend>
                <h2>Dados da entidade</h2>
             </legend>
-
-            <div class="field">
-               <label for="name">Nome da entidade</label>
-               <input type="text" name="name" required="required">
+            <div class="field-group">
+               <div class="field">
+                  <label for="name">Nome da entidade</label>
+                  <input type="text" name="name" required="required">
+               </div>
+               <div class="field">
+                  <label for="image">Imagem da entidade</label>
+                  <input type="url" name="image" required="required">
+               </div>
             </div>
 
             <div class="field-group">
@@ -39,23 +44,24 @@
                </div>
             </div>
 
-            <div class="field-group"></div>
-            <div class="field">
-               <label for="state">Estado</label>
-               <select name="uf" required="required">
-                  <option value="">Selecione o Estado</option>
-               </select>
+            <div class="field-group">
+               <div class="field">
+                  <label for="state">Estado</label>
+                  <select name="uf" required="required">
+                     <option value="">Selecione o Estado</option>
+                  </select>
 
-               <input type="hidden" name="state" required="required">
+                  <input type="hidden" name="state" required="required">
 
-            </div>
+               </div>
 
-            <div class="field">
-               <label for="city">City</label>
-               <select name="city" disabled="disabled" required="required">
-                  <option value="">Selecione a cidade</option>
-               </select>
+               <div class="field">
+                  <label for="city">City</label>
+                  <select name="city" disabled="disabled" required="required">
+                     <option value="">Selecione a cidade</option>
+                  </select>
 
+               </div>
             </div>
 
          </fieldset>
